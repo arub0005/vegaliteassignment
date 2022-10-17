@@ -1,0 +1,15 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "description": "A simple bar chart with embedded data.",
+    "data": {
+            "url": "https://raw.githubusercontent.com/arub0005/3179/main/fuel.csv"
+          },"transform": [{"calculate": "datum.value/1000000000", "as": "tvalue"}],
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "variable", "type": "nominal", "axis": {"labelAngle": 0}, "title": "Type Of Fuel"},
+      "y": {"field": "tvalue", "type": "quantitative", "aggregate":"sum", "title": "CO2 emissions in Tonnes (Billions)"}}
+    }
+  
+  
