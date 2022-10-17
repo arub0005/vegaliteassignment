@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CO2 Emissions Around The World</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/arub0005/vegaliteassignment/main/css/styles.css" media="all">
+
+  </head>
+
+  <!-- Title -->
+  <body>
+    <div class="page" >
+        <div>
+          <div class="pure-u-1-1">
+            <h1 class="x" style="text-align:center">World Wide Carbon Emissions</h1>
+            <h3 style="text-align:center">A visualisation by Ahmad Rubas</h3>
+          </div>
+        </div>
+
+  <div class=box>
+    <div class="pure-u-1-1">
+      <h2 style="text-align:center" class="b">Carbon Emissions Over Time</h2>
+    </div>
+  </div>
+ 
+  <div class="pure-g">
+    <div class="pure-u-4-5">
+      <div id="vis1" class="vis-container"></div>
+    </div>
+    <div class="pure-u-1-5">
+      <div class="description description-right">
+        <h4>How have carbon emissions changed over time? </h4>
+        <p>In this chart we can see the exponential growth in carbon emissions in the 20th
+          century.<span class="bolded">Emissions peaked in 2019</span> and the most recent year in record <span class="bolded"> 2020 shows a
+          decline in emissions.</span> 
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+<div class=box>
+    <div class="pure-u-1-1">
+      <h2 style="text-align:center" class="b">All Time Cumulative Carbon Emissions</h2>
+    </div>
+  </div>
+  <!-- end pure grid group -->
+
+  <!-- pure grid group -->
+  <div class="pure-g">
+    <div class="pure-u-4-5">
+      <div id="vis2" class="vis-container"></div>
+    </div>
+    <div class="pure-u-1-5">
+      <div class="description description-right">
+        <h4>Who has emmitted the most carbon over the years?</h4>
+        <p>In recorded history the world has emitted 1.5 trillion tonnes of CO2 and
+          the United States of America is rersponsible for 25% of it.<span class="bolded">The United States
+          is the counntry that has emitted the most carbon in all of history</span>, the next
+          closest in emissions is China who is rersponsible for approximately 12.5%.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+<div class=box>
+    <div class="pure-u-1-1">
+      <h2 style="text-align:center" class="b">Carbon Emission Per Capita In 2020</h2>
+    </div>
+  </div>
+  <!-- end pure grid group -->
+
+  <!-- pure grid group -->
+  <div class="pure-g">
+    <div class="pure-u-4-5">
+      <div id="vis3" class="vis-container"></div>
+    </div>
+    <div class="pure-u-1-5">
+      <div class="description description-right">
+        <h4>In which country does the average person emmit the most carbon?</h4>
+        <p>There are very large inequalities in per capita emissions across the world.
+            The worlds largest oil prorduces are the highest per capita producers of carbon
+            <span class="bolded">Qatar is the highest coming contributing 37 trillion tonnes per capita.</span> </p>
+      </div>
+    </div>
+
+  </div>
+
+<div class=box>
+    <div class="pure-u-1-1">
+      <h2 style="text-align:center" class="b">GDP impact on Carbon Emissions</h2>
+    </div>
+  </div>
+  <!-- end pure grid group -->
+
+  <!-- pure grid group -->
+  <div class="pure-g">
+    <div class="pure-u-4-5">
+      <div id="vis4" class="vis-container"></div>
+    </div>
+    <div class="pure-u-1-5">
+      <div class="description description-right">
+        <h4>How does GDP impact carbon emissions?</h4>
+        <p>There is generally a <span class="bolded">positive corelation between GDP and carbon emission</span>
+            that is a country with a higher gdp is likely to have higercarbon emissions as
+        seen with the China and USA. <span class="bolded">Population also has a general positive corelation with
+    carbon emissions</span>, the bigger the population the higher the emissions. </p>
+      </div>
+    </div>
+
+  </div>
+
+<div class=box>
+    <div class="pure-u-1-1">
+      <h2 style="text-align:center" class="b">Carbon Emissions by Sector</h2>
+    </div>
+  </div>
+  <!-- end pure grid group -->
+
+  <!-- pure grid group -->
+  <div class="pure-g">
+    <div class="pure-u-4-5">
+      <div id="vis5" class="vis-container"></div>
+    </div>
+    <div class="pure-u-1-5">
+      <div class="description description-right">
+        <h4>How do different sectors contribute to carbon emmisions?</h4>
+        <p>We can see that <span class="bolded">electricity and heat contribute the
+            most to emissions</span>. Meanwhile<span class="bolded">aviation and shipping cocntribute the least</span> when
+            excluding other fuel combustion.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class=box>
+    <div class="pure-u-1-1">
+      <h2 style="text-align:center" class="b">Carbon Emissions by Fuel</h2>
+    </div>
+  </div>
+  <!-- end pure grid group -->
+
+  <!-- pure grid group -->
+  <div class="pure-g">
+    <div class="pure-u-4-5">
+      <div id="vis6" class="vis-container"></div>
+    </div>
+    <div class="pure-u-1-5">
+      <div class="description description-right">
+        <h4>Which fuel types contrirbute the most and least carbon emission?</h4>
+        <p>Fuel is used across all industries so it is always contributing to emmisions,
+          <span class="bolded">coal is the highest contributing fuel</span> to global emissions whereas
+           <span class="bolded">flaring is the least contributing</span> out of the more common fuels. 
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+<script type="text/javascript">
+    var specVis1 = "https://raw.githubusercontent.com/arub0005/vegaliteassignment/main/js/percapita.json";
+    var specVis2 = "https://raw.githubusercontent.com/arub0005/vegaliteassignment/main/js/bubble.json";
+    var specVis3 = "https://raw.githubusercontent.com/arub0005/vegaliteassignment/main/js/totalco2.json";
+    var specVis4 = "https://raw.githubusercontent.com/arub0005/vegaliteassignment/main/js/line.json";
+    var specVis5 = "https://raw.githubusercontent.com/arub0005/vegaliteassignment/main/js/stacked.json";
+    var specVis6 = "https://raw.githubusercontent.com/arub0005/vegaliteassignment/main/js/bar.json";
+    
+
+
+    vegaEmbed('#vis1', specVis4, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis2', specVis3, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis3', specVis1, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis4', specVis2, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis5', specVis5, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#vis6', specVis6, { "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+  </script>
+</body>
+
+</html>
