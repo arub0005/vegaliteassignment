@@ -1,0 +1,24 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800, "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/arub0005/vegaliteassignment/main/ghg.csv"},
+      "transform": [{"filter": "datum.value > 0"},{"calculate": "datum.value/1000000", "as": "m_value"}],
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "timeUnit": "year", "field": "Year",
+        "axis": {"format": "%Y"}, "title":"Year"
+      },
+      "y": {
+        "aggregate": "sum", "field": "m_value",
+        "axis": {"labelLimit": 0}, "title":"CO2eq millions"
+      },
+      "color": {
+        "field": "variable",
+        "scale": {"scheme": "category20"}, "title": "Sectors"
+      }
+    }
+  }
+  
+  
